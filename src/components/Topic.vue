@@ -1,12 +1,12 @@
 <template>
-  <div class="index">
-    Index
+  <div class="topics">
+    Topics
   </div>
 </template>
 
 <script>
 export default {
-  name: 'index'
+  name: 'topic'
 }
 </script>
 

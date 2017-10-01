@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <div is="app-header"></div>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import AppHeader from '@/components/Header.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    AppHeader
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
+  .container {
+    background-color: #e5e5e5;
+  }
 }
 </style>

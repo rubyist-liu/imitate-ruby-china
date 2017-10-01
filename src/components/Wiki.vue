@@ -1,12 +1,12 @@
 <template>
-  <div class="index">
-    Index
+  <div class="wiki">
+    Wiki
   </div>
 </template>
 
 <script>
 export default {
-  name: 'index'
+  name: 'wiki'
 }
 </script>
 
