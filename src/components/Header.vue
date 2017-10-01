@@ -1,5 +1,5 @@
 <template>
-  <el-row :gutter="10" class="header">
+  <el-row :gutter="10" class="header container-fluid">
     <el-col :offset="3" class="navbar-brand" :span="1">
       <b>Ruby</b> China
     </el-col>

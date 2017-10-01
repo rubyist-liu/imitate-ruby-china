@@ -4,8 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import BootstrapVue from 'bootstrap-vue'
+import lodash from 'lodash'
+import VueLodash from 'vue-lodash'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import 'element-ui/lib/theme-default/index.css'
-Vue.use(ElementUI)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(ElementUI, BootstrapVue, VueLodash, lodash, VueAxios, axios)
 
 Vue.config.productionTip = false
 
