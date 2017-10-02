@@ -1,39 +1,27 @@
 <template>
-  <el-row :gutter="10" class="header container-fluid">
-    <el-col :offset="3" class="navbar-brand" :span="1">
-      <b>Ruby</b> China
-    </el-col>
-    <el-col :span="4">
-      <el-menu mode="horizontal">
-        <el-menu-item index="1">
-          <router-link to="/topics">社区</router-link>
-        </el-menu-item>
-        <el-menu-item index="2">
-          <router-link to="/jobs">招聘</router-link>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <router-link to="/wiki">维基</router-link>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <router-link to="/sites">酷站</router-link>
-        </el-menu-item>
-      </el-menu>
-    </el-col>
-    <el-col :offset="5" :span="2">
-      <el-input
-        placeholder="搜索本站内容"
-        icon="search">
-      </el-input>
-    </el-col>
-    <el-col :span="4">
-      <el-button>
+  <header>
+    <div class="container">
+      <span class="nav-brand">
+        <b>Ruby</b> China
+      </span>
+      <ul class="menu">
+        <li><router-link to="/topics">社区</router-link></li>
+        <li><router-link to="/jobs">招聘</router-link></li>
+        <li><router-link to="/wiki">维基</router-link></li>
+        <li><router-link to="/sites">酷站</router-link></li>
+      </ul>
+      <div class="search">
+        <form>
+          <icon name="search" scale="0.8"></icon>
+          <input type="text" name="search" placeholder="搜索本站内容"/>
+        </form>
+      </div>
+      <div class="sign">
         <router-link to="/sign_up">注册</router-link>
-      </el-button>
-      <el-button>
         <router-link to="/sign_in">登录</router-link>
-      </el-button>
-    </el-col>
-  </el-row>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -44,16 +32,53 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  .header {
-  height: 60px;
-  line-height: 60px;
-    .navbar-brand {
-      b {
-        color: red;
+  header {
+    background: white !important;
+    .container {
+      width: 1000px;
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-brand {
+        b {
+          color: red;
+        }
       }
-    }
-    .el-menu {
-      background-color: white;
+      .menu {
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-start;
+        li {
+          box-sizing: border-box;
+          width: 60px;
+          text-align: center;
+          padding: 12px;
+
+          &:hover {
+            border-bottom: 3px solid red;
+            a {
+              color: red !important;
+            }
+          }
+        }
+      }
+      .search {
+        margin-right: 20px;
+        input {
+          outline: none;
+          border: none;
+          &::placeholder {
+            color: #e5e5e5;
+          }
+        }
+      }
+      .sign {
+      }
     }
   }
 </style>

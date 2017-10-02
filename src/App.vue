@@ -16,9 +16,19 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  font-family: PingFangSC-Regular, sans-serif;
+}
 #app {
-  .container {
-    background-color: #e5e5e5;
+  background-color: #e5e5e5;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  ul {
+    list-style-type: none;
   }
 }
 </style>
