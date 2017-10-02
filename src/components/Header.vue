@@ -35,7 +35,8 @@ export default {
   header {
     background: white !important;
     .container {
-      width: 1000px;
+      min-width: 960px;
+      width: 1003px;
       height: 50px;
       margin: 0 auto;
       display: flex;
