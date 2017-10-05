@@ -1,35 +1,25 @@
 <template>
   <div class="sign-up">
-    <el-row>
-      <el-col :span="8" :offset="2">
-        <el-form ref="form" :model="form">
-          <el-form-item label="用户名">
-            <el-input v-model="form.username"></el-input>
-          </el-form-item>
-          <el-form-item label="名字">
-            <el-input v-model="form.name"></el-input>
-          </el-form-item>
-          <el-form-item label="邮箱">
-            <el-input v-model="form.email"></el-input>
-          </el-form-item>
-          <el-form-item label="密码">
-            <el-input v-model="form.password"></el-input>
-          </el-form-item>
-          <el-form-item label="确认密码">
-            <el-input v-model="form.password_confirmed"></el-input>
-          </el-form-item>
-          <el-form-item label="验证码">
-            <el-input v-model="form.verification_code"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="submitForm">提交注册信息</el-button>
-            <el-button>
-              <router-link to="/sign_in">登录</router-link>
-            </el-button>
-          </el-form-item>
-      </el-form>
-    </el-col>
-    </el-row>
+    <div class="container">
+      <h4>注册新用户</h4>
+      <form class="form" action="" method="post">
+        <input type="text" name="username" placeholder="用户名" value="">
+        <input type="text" name="name" placeholder="姓名" value="">
+        <input type="email" name="email" placeholder="Email" value="">
+        <div class="form-group">
+          <input type="checkbox" name="email-public" value=""> 公开 Email
+        </div>
+        <input type="password" name="password" placeholder="密码" value="">
+        <input type="password" name="password-confirmed" placeholder="确认密码" value="">
+        <div class="form-group">
+          <input type="text" name="verification-code" placeholder="验证码" value="">
+        </div>
+        <div class="form-action">
+          <input type="submit" value="提交注册信息">
+          <router-link to="/sign_in">登录</router-link>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -57,5 +47,53 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+  .sign-up {
+    max-width: 960px;
+    height: 480px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      width: 520px;
+      height: 460px;
+      background-color: white;
+      h4 {
+        margin: 0 0 10px 0;
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        background-color: #f5f5f5;
+        border-color: #ddd;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4px 20px;
+        height: 400px;
+
+        input[type=text], input[type=email], input[type=password] {
+          height: 30px;
+        }
+
+        input[type=submit] {
+          background-color: rgb(53, 109, 208);
+          border: none;
+          border-radius: 3px;
+          padding: 4px 5px;
+          color: white;
+        }
+        a {
+          border: 1px solid rgb(238, 238, 238);
+          border-radius: 3px;
+          padding: 4px 5px;
+          color: white;
+        }
+      }
+    }
+  }
 </style>

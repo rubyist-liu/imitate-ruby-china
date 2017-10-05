@@ -13,7 +13,7 @@
     <div class="card features">
       <div class="card feature">
         <div class="icon">
-          <a href="#"><icon name="comments-o" scale="4"></icon></a>
+          <a href="#"><icon name="comments-o" scale="4" color="rgb(248, 99, 52)"></icon></a>
         </div>
         <div class="text">
           <a href="#"> Ruby 社区 <icon name="arrow-right"></icon></a>
@@ -22,7 +22,7 @@
 
       <div class="card feature">
         <div class="icon">
-          <a href="#"><icon name="support" scale="4"></icon></a>
+          <a href="#"><icon name="support" scale="4" color="rgb(255, 213, 47)"></icon></a>
         </div>
         <div class="text">
           <a href="#"> 技术文档 <icon name="arrow-right"></icon></a>
@@ -31,7 +31,7 @@
 
       <div class="card feature">
         <div class="icon">
-          <a href="#"><icon name="users" scale="4"></icon></a>
+          <a href="#"><icon name="users" scale="4" color="rgb(49, 125, 218)"></icon></a>
         </div>
         <div class="text">
           <a href="#"> 招聘与求职 <icon name="arrow-right"></icon></a>
@@ -40,7 +40,7 @@
 
       <div class="card feature">
         <div class="icon">
-          <a href="#"><icon name="diamond" scale="4"></icon></a>
+          <a href="#"><icon name="diamond" scale="4" color="rgb(59, 213, 78)"></icon></a>
         </div>
         <div class="text">
           <a href="#"> 精华文章 <icon name="arrow-right"></icon></a>
@@ -48,9 +48,36 @@
       </div>
     </div>
 
-    <div class="card suggest-topics">
-
+    <div class="topics-container">
+      <h3>社区精华贴</h3>
+      <ul>
+        <li>
+          <article class="card">
+            <header>
+              <icon class="avatar" name="user" scale="3"></icon>
+              <section class="title">
+                <h4>title <icon name="diamond" color="rgb(235, 84, 36)"></icon></h4>
+                <footer>poster 最后由 commenter 回复于 n 天前</footer>
+              </section>
+              <div class="badge">3</div>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <header>
+              <icon class="avatar" name="user" scale="3"></icon>
+              <section class="title">
+                <h4>title <icon name="diamond"></icon></h4>
+                <footer>poster 最后由 commenter 回复于 n 天前</footer>
+              </section>
+              <div class="badge">3</div>
+            </header>
+          </article>
+        </li>
+      </ul>
     </div>
+
 
     <div class="card index-sections">
 
@@ -71,7 +98,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .index {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -123,8 +150,45 @@ export default {
           background-color: rgba(0, 0, 0, 0);
         }
       }
-
     }
+    .topics-container {
+      background-color: white;
+      > h3 {
+        padding: 10px 20px;
+        margin: 0;
+        color: #333;
+        background-color: #f5f5f5;
+        border-color: #ddd;
+      }
+      li {
+        width: 45%;
+        display: inline-block;
+      }
+      article {
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
+          .avatar {
+          }
+          .title {
+            flex-grow: 2;
+            margin-left: 14px;
+            h4 {
+              margin: 0;
+            }
+          }
+          .badge {
+            width: 32px;
+            height: 17px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #CFD3E6;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
   }
 </style>

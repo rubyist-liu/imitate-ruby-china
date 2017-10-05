@@ -2,7 +2,9 @@
   <header>
     <div class="container">
       <span class="nav-brand">
-        <b>Ruby</b> China
+        <router-link to="/">
+          <b>Ruby</b> China
+        </router-link>
       </span>
       <ul class="menu">
         <li><router-link to="/topics">社区</router-link></li>
