@@ -1,0 +1,39 @@
+$font-weight-normal: normal !default;
+$btn-font-weight:                $font-weight-normal !default;
+$border-width: 1px !default;
+$input-btn-border-width:         $border-width !default; // For form controls and buttons
+$enable-shadows:            false !default;
+
+$white:  #fff !default;
+$blue:    #007bff !default;
+$gray-600: #868e96 !default;
+$green:   #28a745 !default;
+$cyan:    #17a2b8 !default;
+$yellow:  #ffc107 !default;
+$red:     #dc3545 !default;
+$gray-100: #f8f9fa !default;
+$gray-800: #343a40 !default;
+$black:  #000 !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;
+
+$btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
+$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
+$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
+
+$enable-rounded:            true !default;
+$border-radius:          .25rem !default;
+$font-size-base: 1rem !default;
+$input-btn-padding-y:       .5rem !default;
+$input-btn-padding-x:       .75rem !default;
+$input-btn-line-height:     1.25 !default;
+$btn-border-radius:              $border-radius !default;

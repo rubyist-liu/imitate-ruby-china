@@ -11,12 +11,12 @@
         </div>
         <input type="password" name="password" placeholder="密码" value="">
         <input type="password" name="password-confirmed" placeholder="确认密码" value="">
-        <div class="form-group">
+        <!-- <div class="form-group">
           <input type="text" name="verification-code" placeholder="验证码" value="">
-        </div>
+        </div> -->
         <div class="form-action">
-          <input type="submit" value="提交注册信息">
-          <router-link to="/sign_in">登录</router-link>
+          <input type="submit" class="btn btn-primary" value="提交注册信息">
+          <router-link to="/sign_in" class="btn btn-secondary">登录</router-link>
         </div>
       </form>
     </div>
@@ -78,20 +78,8 @@ export default {
 
         input[type=text], input[type=email], input[type=password] {
           height: 30px;
-        }
-
-        input[type=submit] {
-          background-color: rgb(53, 109, 208);
-          border: none;
-          border-radius: 3px;
-          padding: 4px 5px;
-          color: white;
-        }
-        a {
-          border: 1px solid rgb(238, 238, 238);
-          border-radius: 3px;
-          padding: 4px 5px;
-          color: white;
+          padding: 3px 10px;
+          border-radius: 5px;
         }
       }
     }

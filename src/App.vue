@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/assets/styles/bootstrap/bootstrap";
 body {
   margin: 0;
   padding: 0;
