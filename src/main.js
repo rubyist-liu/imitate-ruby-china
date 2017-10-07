@@ -3,27 +3,23 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import 'normalize.css/normalize.css'
 
 import 'vue-awesome/icons'
-// import ElementUI from 'element-ui'
-// import BootstrapVue from 'bootstrap-vue'
+import Icon from 'vue-awesome/components/Icon'
+Vue.component('icon', Icon)
 
-// import lodash from 'lodash'
+import lodash from 'lodash'
 import VueLodash from 'vue-lodash'
-
-// import axios from 'axios'
+import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-import Icon from 'vue-awesome/components/Icon'
-// import 'element-ui/lib/theme-default/index.css'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.use(VueLodash, lodash)
+Vue.use(VueAxios, axios)
 
-// Vue.use(ElementUI, BootstrapVue, VueLodash, lodash, VueAxios, axios)
-Vue.use(VueLodash, VueAxios)
-
-Vue.component('icon', Icon)
+axios.defaults.baseURL = 'http://localhost:4000/api'
+axios.defaults.headers.common = { 'Accept': 'application/json', 'Content-Type': 'application/json' }
 
 Vue.config.productionTip = false
 
